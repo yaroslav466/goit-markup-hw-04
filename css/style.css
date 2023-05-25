@@ -2,6 +2,9 @@
     --main-font-family: 'Roboto', sans-serif;
     --secondary-font-family-family: 'Raleway', sans-serif;
     --accent-color: #2E2F42; 
+    --second-color: #8e8f99; 
+    --third-color: #4d5ae5;
+    --fourth-color: #f4f4fd;
 }
 
 .list{
@@ -72,6 +75,7 @@ body{
 .page-header{
     border-bottom: 1px solid #e7e9fc;
     display: flex;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-navigation{
@@ -145,17 +149,16 @@ color: #404bbf;
 }
 
 .hero{
+    max-width: 1440px;
     background-color: var(--accent-color);
     padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(../images/workplace.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
-    ),
-    url(../images/workplace.jpg);
 }
 
 .hero-title{
@@ -212,7 +215,11 @@ color: #404bbf;
 .studio-icon-wrp{
     background: #F4F4FD;
     border-radius: 4px;
-    padding: 24px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    margin-bottom: 8px;
 }
 
 
@@ -223,7 +230,7 @@ color: #404bbf;
     line-height: 24px;
     letter-spacing: 0.02em;
     color: var(--accent-color);
-    margin: 8px 0 8px 0;
+    margin-bottom: 8px;
 }
 
 .studio-descr{
@@ -317,18 +324,28 @@ color: #404bbf;
 .contacts-icon-item{
     width: 40px;
     height: 40px;
-    background: #4D5AE5;
-    border-radius: 100%;
-    position: relative;
     margin-bottom: 32px;
 }
 
 .contacts-icon{
-    position: absolute;
-    top: 12px;
-    left: 12px;
+    fill: #f4f4fd;
 }
 
+
+.contacts-link{
+    width: 100%;
+    height: 100%;
+    background: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-link:hover,
+.contacts-link:focus{
+    background-color: #404bbf;
+}
 
 .footer{
     background-color: var(--accent-color);
@@ -339,7 +356,8 @@ color: #404bbf;
 }
 
 .footer-con{
-    display: inline-flex;
+    display: flex;
+    align-items: baseline;
 }
 
 .footer-logo{
@@ -366,8 +384,8 @@ color: #404bbf;
     max-width: 264px;
 }
 
-.footer-links{
-    padding-left: 120px;
+.footer-about{
+    margin-right: 120px;
 }
 
 
@@ -377,10 +395,10 @@ color: #404bbf;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+    margin-bottom: 16px;
 }
 
 .footer-wrp{
-    margin-top: 16px;
     display: flex;
     gap: 16px;
 }
@@ -393,10 +411,23 @@ color: #404bbf;
     position: relative;
 }
 
+.footer-link{
+    width: 100%;
+    height: 100%;
+    background-color: var(--third-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-link:hover,
+.footer-link:focus{
+    background-color: #31d0aa;
+}
+
 .footer-icon{
-    position: absolute;
-    top: 8px;
-    left: 8px;
+    fill: var(--fourth-color) ;
 }
 
 .customers{
@@ -406,26 +437,43 @@ color: #404bbf;
 .customers-title{
     font-weight: 700;
     font-size: 36px;
-    line-height: 40px;
+    line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--accent-color);
+    margin-bottom: 72px;
 }
 
 .customers-wrp{
-    padding-top: 72px;
     display: flex;
     gap: 24px;
 }
 
 .customers-item{
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+}
+
+.customers-link{
+    width: 100%;
+    height: 100%;
     border: 1px solid #8E8F99;
     border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--second-color)
+}
+
+.customers-link:hover,
+.customers-link:focus{
+    border-color: #404bbf;
+    color: #404bbf; 
 }
 
 .customers-icon{
-    margin: 16px 32px;
+    fill: currentColor;
 }
 
 .portfolio{
@@ -456,6 +504,7 @@ color: #404bbf;
     background: #404BBF;
     color: #fff;
     border: 1px solid transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -470,6 +519,15 @@ color: #404bbf;
 
 .portfolio-item{
     width: calc((100% - 48px) / 3);
+}
+
+.portfolio-link{
+    display: block;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-wrp{
