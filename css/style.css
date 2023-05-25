@@ -312,7 +312,7 @@ color: #404bbf;
     letter-spacing: 0.02em;
     color: #434455;
     text-align: center;
-
+    margin-bottom: 8px;
 }
 
 .contacts-icon-wrp{
@@ -324,7 +324,6 @@ color: #404bbf;
 .contacts-icon-item{
     width: 40px;
     height: 40px;
-    margin-bottom: 32px;
 }
 
 .contacts-icon{
