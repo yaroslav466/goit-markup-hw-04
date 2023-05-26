@@ -354,7 +354,7 @@ color: #404bbf;
     gap: 120px;
 }
 
-.footer-con{
+.footer-container{
     display: flex;
     align-items: baseline;
 }
